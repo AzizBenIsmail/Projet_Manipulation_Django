@@ -1,4 +1,7 @@
 ## 📦 Install
+- [📝 python]
+- [📝 virtuelenv]
+- [📝 django]
 VirtualEnv --> environnement virtuel python ou on va executer l'app
 
 gestionnaire de paquets --> pip 
