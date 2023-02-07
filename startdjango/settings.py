@@ -129,3 +129,14 @@ MEDIA_URL='/Medias/'
 MEDIA_ROOt='/Medias/'
 # Pillow lel affichage + upload image w lezem f env virtual active ===> pip install Pillow
 AUTH_USER_MODEL='users.Person'
+
+#python --version --> installer python 3.11
+#pip install virtuelenv --> installer virtuelenv
+#virtualenv venv --> creer un virtuelenv 
+#venv\Scripts\activate --> activer l'environnement
+#pip install django --> installer django
+#django-admin startproject ProjectPython1 --> creation d'un projet
+#djangoadmin startapp events --> creation d'une app 
+#pyhton manage.py makemigrations AppName --> Migrations for 'AppName'
+#python manage.py migrate --> Running migrations 'Project'
+#python manage.py runserver --> deployer l'app
