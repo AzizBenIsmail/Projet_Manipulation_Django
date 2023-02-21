@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Event
-from django.views.generic import ListView
+from django.views.generic import *
 # Create your views here.
 def HomePage(req,id):
     response='hrllo from %s'
@@ -27,3 +27,8 @@ class EventListClass(ListView):
     model=Event
     template_name='events\EvenetListView.html'
     context_object_name='events'
+    
+class EventDetailClass(DetailView):
+    model=Event
+    template_name='events\EventDetailClass.html'
+    context_object_name='event'

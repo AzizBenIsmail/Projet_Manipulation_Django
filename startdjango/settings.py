@@ -127,8 +127,8 @@ STATICFILES_DIRS = [BASE_DIR /'static/']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Image
-MEDIA_URL='Medias/'
-MEDIA_ROOt='Medias/'
+MEDIA_URL='Media/'
+MEDIA_ROOT='Media/'
 # Pillow lel affichage + upload image w lezem f env virtual active ===> pip install Pillow
 AUTH_USER_MODEL='users.Person'
 
