@@ -56,7 +56,7 @@ ROOT_URLCONF = 'startdjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'startdjango/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,6 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR /'static/']
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -125,8 +127,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Image
-MEDIA_URL='/Medias/'
-MEDIA_ROOt='/Medias/'
+MEDIA_URL='Medias/'
+MEDIA_ROOt='Medias/'
 # Pillow lel affichage + upload image w lezem f env virtual active ===> pip install Pillow
 AUTH_USER_MODEL='users.Person'
 
