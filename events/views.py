@@ -66,3 +66,8 @@ class CreateEvent(CreateView):   #best in Exam
     form_class=EventModelform
     success_url = reverse_lazy('Event_ListClass')
     
+class ModelUpdateView(UpdateView):
+    model = Event
+    template_name = "events/event_form.html"
+    form_class=EventModelform
+    success_url = reverse_lazy('Event_ListClass')
