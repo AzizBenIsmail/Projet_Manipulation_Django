@@ -5,7 +5,9 @@ urlpatterns = [
     path('homepage/<int:id>',HomePage,name='HomePage'),
     path('eventStatic/',eventStatic,name='event_Static'),
     path('listevent/',EventList,name='event_list'),
-    path('create_event/',create_event,name='create_event'),
+    path('createEvent/',create_event,name='create_event'),
+    path('add_event/',add_event,name='add_event'),
+    path('create_event_view/',CreateEvent.as_view(),name='create_event_view'),
     path('EventListClass/',EventListClass.as_view(),name='Event_ListClass'),
     path('EventDetailClass/<int:pk>',EventDetailClass.as_view(),name='Event_DetailClass'),
 

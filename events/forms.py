@@ -16,3 +16,20 @@ class EventForm(forms.Form):
                'type': 'date',
                }))
     organizer=forms.ModelChoiceField(label='Event Organizer',queryset=Person.objects.all())
+    
+class EventModelform(forms.ModelForm):
+    
+    class Meta:
+        model = Event
+        fields = ['title','description','categorie','image','organizer','dateEvent','nbrParticipants']
+        exclude=('state',)
+    dateEvent=forms.DateField(
+        label="Event Date",
+        widget=forms.DateInput(
+        attrs={
+        'type' : 'date',
+        'class' :'form-control date-input'
+        }
+        ))
+    organizer=forms.ModelChoiceField(label="Event Organizer",
+        queryset=Person.objects.all())

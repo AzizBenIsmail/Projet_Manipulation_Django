@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Event
 from django.views.generic import *
-from .forms import EventForm
+from .forms import EventForm,EventModelform
+from django.urls import reverse_lazy
 # Create your views here.
 def HomePage(req,id):
     response='hrllo from %s'
@@ -45,3 +46,23 @@ def create_event(request):
         else:
             print(form.errors)
     return render(request,'events/event_form.html',{'form':form})
+
+def add_event(request):
+    if request.method == 'GET':
+        form = EventModelform()
+        return render(request,'events/event_form.html',{'form':form})
+    if request.method == 'POST':
+        form=EventModelform(request.POST, request.FILES)
+        if form.is_valid():
+            Event=form.save(commit=False)
+            Event.save()
+            return redirect('Event_ListClass')
+        else:
+            return render(request,"events/event_form.html",{'form':form})
+
+class CreateEvent(CreateView):   #best in Exam
+    model = Event
+    template_name = "events/event_form.html"
+    form_class=EventModelform
+    success_url = reverse_lazy('Event_ListClass')
+    
