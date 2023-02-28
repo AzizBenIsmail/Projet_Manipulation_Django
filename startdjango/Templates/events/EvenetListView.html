@@ -6,7 +6,7 @@
     {% for e in events%}
         {% comment %} <li>{{e.title}}</li> <li>{{e.description}}</li> <br> {% endcomment %}
         <a href="{% url 'Event_DetailClass' e.id %}" > {{e.title}}</a>
-<img src="{{e.image.url}}" >
+<img src="{{e.image.url}}" />
         {% endfor %}
 
 </ul>
