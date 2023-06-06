@@ -3,12 +3,13 @@ VirtualEnv --> environnement virtuel python ou on va executer l'app
 gestionnaire de paquets --> pip 
 
 1/ installer python 3.11 --> python --version
-2/ installer virtuelenv --> pip install virtuelenv
+2/ installer virtuelenv --> pip install virtualenv
 3/ creer un virtuelenv --> virtualenv venv
 4/ activer l'environnement --> venv\Scripts\activate
 5/ installer django --> pip install django
 6/ creation d'un projet --> django-admin startproject ProjectPython1
-7/ creation d'une app --> djangoadmin startapp events (on doit tout 
+7/ creation d'une app --> django-admin startapp events
+
 8/ run l'app --> python manage.py runserver
 
 8/ Migrations django --> python manage.py makemigrations AppName / python manage.py migrate
