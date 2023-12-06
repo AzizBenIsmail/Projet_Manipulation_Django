@@ -3,6 +3,7 @@
 - [📝 virtuelenv]
 - [📝 django]
 
+![GitHub repo size](https://img.shields.io/github/repo-size/AzizBenIsmail/Projet_Manipulation_Django)
 
 VirtualEnv --> environnement virtuel python ou on va executer l'app
 
